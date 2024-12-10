@@ -128,4 +128,16 @@ def test_get_all_articles():
      
     assert len(Article.all_articles) == 2  
 
+ print(f" Total articles: {len(Article.all)}\n")
+    
+    for article in Article.all:
+        print(f"Article Title: {article.title}")
+        print(f"Author: {article.author.name}")
+        print(f"Magazine: {article.magazine.name} (Category: {article.magazine.category})\n")
+
+
+
+if __name__ == "__main__":
+    test_get_all_articles()
+
 
